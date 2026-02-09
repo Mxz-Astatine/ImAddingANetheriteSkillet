@@ -66,7 +66,8 @@ public class BlockTags extends FabricTagProvider.BlockTagProvider
         tagBuilder(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(
 				ModBlocks.STOVE.get(),
 				ModBlocks.COOKING_POT.get(),
-				ModBlocks.SKILLET.get()
+				ModBlocks.SKILLET.get(),
+                ModBlocks.NETHERITE_SKILLET.get()
 		);
         tagBuilder(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.ORGANIC_COMPOST.get(),

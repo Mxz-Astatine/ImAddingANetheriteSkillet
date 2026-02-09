@@ -52,7 +52,9 @@ public class ModItems
 			() -> new CookingPotItem(ModBlocks.COOKING_POT.get(), basicItem().stacksTo(1)));
 	public static final Supplier<Item> SKILLET = registerWithTab("skillet",
 			() -> new SkilletItem(ModBlocks.SKILLET.get(), basicItem().stacksTo(1).attributes(SkilletItem.createAttributes(SkilletItem.SKILLET_TIER, 5.0F, -3.1F))));
-	public static final Supplier<Item> CUTTING_BOARD = registerWithTab("cutting_board",
+    public static final Supplier<Item> NETHERITE_SKILLET = registerWithTab("netherite_skillet",
+            () -> new SkilletItem(ModBlocks.NETHERITE_SKILLET.get(), basicItem().stacksTo(1).attributes(SkilletItem.createAttributes(SkilletItem.NETHERITE_SKILLET_TIER, 7.0F, -3.1F))));
+    public static final Supplier<Item> CUTTING_BOARD = registerWithTab("cutting_board",
 			() -> new FuelBlockItem(ModBlocks.CUTTING_BOARD.get(), basicItem(), 200));
 	public static final Supplier<Item> BASKET = registerWithTab("basket",
 			() -> new FuelBlockItem(ModBlocks.BASKET.get(), basicItem(), 300));

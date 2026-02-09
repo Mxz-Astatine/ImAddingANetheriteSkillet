@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import vectorwing.farmersdelight.common.item.NetheriteSkilletItem;
 import vectorwing.farmersdelight.common.item.SkilletItem;
 
 @Mixin(Player.class)
@@ -25,10 +26,12 @@ public abstract class PlayerMixin extends LivingEntity {
     @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;resetAttackStrengthTicker()V"))
     private void captureAttackStrengthScale(Entity target, CallbackInfo ci) {
         SkilletItem.SkilletEvents.attackPower = this.getAttackStrengthScale(0.0F);
+        NetheriteSkilletItem.SkilletEvents.attackPower = this.getAttackStrengthScale(0.0F);
     }
 
     @Inject(method = "hurt", at = @At("HEAD"))
     private void handleSkilletAttackSound(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         SkilletItem.SkilletEvents.playSkilletAttackSound(this, source);
+        NetheriteSkilletItem.SkilletEvents.playSkilletAttackSound(this, source);
     }
 }

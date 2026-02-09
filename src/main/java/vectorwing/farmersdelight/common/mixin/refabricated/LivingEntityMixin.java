@@ -14,6 +14,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import vectorwing.farmersdelight.common.block.TomatoVineBlock;
 import vectorwing.farmersdelight.common.item.KnifeItem;
+import vectorwing.farmersdelight.common.item.NetheriteSkilletItem;
 import vectorwing.farmersdelight.common.item.SkilletItem;
 import vectorwing.farmersdelight.common.item.enchantment.BackstabbingEnchantment;
 
@@ -27,6 +28,8 @@ public abstract class LivingEntityMixin extends Entity {
     private float handleBackstabbingDamage(float original, DamageSource source) {
         if (original > 0) {
             SkilletItem.SkilletEvents.playSkilletAttackSound((LivingEntity)(Object)this, source);
+            NetheriteSkilletItem.SkilletEvents.playSkilletAttackSound((LivingEntity)(Object)this, source);
+
             // You'd be multiplying with 0 if you were to do this with any value <= 0.
             return BackstabbingEnchantment.BackstabbingEvent.onKnifeBackstab((LivingEntity)(Object)this, source, original);
         }

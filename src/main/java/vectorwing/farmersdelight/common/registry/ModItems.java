@@ -53,7 +53,7 @@ public class ModItems
 	public static final Supplier<Item> SKILLET = registerWithTab("skillet",
 			() -> new SkilletItem(ModBlocks.SKILLET.get(), basicItem().stacksTo(1).attributes(SkilletItem.createAttributes(SkilletItem.SKILLET_TIER, 5.0F, -3.1F))));
     public static final Supplier<Item> NETHERITE_SKILLET = registerWithTab("netherite_skillet",
-            () -> new SkilletItem(ModBlocks.NETHERITE_SKILLET.get(), basicItem().stacksTo(1).attributes(SkilletItem.createAttributes(SkilletItem.NETHERITE_SKILLET_TIER, 7.0F, -3.1F))));
+            () -> new NetheriteSkilletItem(ModBlocks.NETHERITE_SKILLET.get(), basicItem().stacksTo(1).attributes(NetheriteSkilletItem.createAttributes(NetheriteSkilletItem.NETHERITE_SKILLET_TIER, 7.0F, -3.1F))));
     public static final Supplier<Item> CUTTING_BOARD = registerWithTab("cutting_board",
 			() -> new FuelBlockItem(ModBlocks.CUTTING_BOARD.get(), basicItem(), 200));
 	public static final Supplier<Item> BASKET = registerWithTab("basket",

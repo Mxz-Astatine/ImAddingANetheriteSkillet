@@ -60,6 +60,7 @@ public class ClientSetupEvents
         BlockEntityRenderers.register(ModBlockEntityTypes.CANVAS_SIGN.get(), CanvasSignRenderer::new);
         BlockEntityRenderers.register(ModBlockEntityTypes.HANGING_CANVAS_SIGN.get(), HangingCanvasSignRenderer::new);
         BlockEntityRenderers.register(ModBlockEntityTypes.SKILLET.get(), SkilletRenderer::new);
+        BlockEntityRenderers.register(ModBlockEntityTypes.NETHERITE_SKILLET.get(), NetheriteSkilletRenderer::new);
     }
 
 	/*

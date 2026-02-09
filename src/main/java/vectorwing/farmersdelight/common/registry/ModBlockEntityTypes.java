@@ -19,6 +19,8 @@ public class ModBlockEntityTypes
 			() -> BlockEntityType.Builder.of(CuttingBoardBlockEntity::new, ModBlocks.CUTTING_BOARD.get()).build());
 	public static final Supplier<BlockEntityType<SkilletBlockEntity>> SKILLET = regBlockEntity("skillet",
 			() -> BlockEntityType.Builder.of(SkilletBlockEntity::new, ModBlocks.SKILLET.get()).build());
+    public static final Supplier<BlockEntityType<NetheriteSkilletBlockEntity>> NETHERITE_SKILLET = regBlockEntity("netherite_skillet",
+            () -> BlockEntityType.Builder.of(NetheriteSkilletBlockEntity::new, ModBlocks.NETHERITE_SKILLET.get()).build());
 	public static final Supplier<BlockEntityType<CabinetBlockEntity>> CABINET = regBlockEntity("cabinet",
 			() -> BlockEntityType.Builder.of(CabinetBlockEntity::new,
 							ModBlocks.OAK_CABINET.get(),
